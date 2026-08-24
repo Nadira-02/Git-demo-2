@@ -1,4 +1,5 @@
-Sade = input(" Mikä on ympyrän säteen: ")
-Sade = float(Sade)
-ympyra = 3.14 * (Sade ** 2)
-print("ympyrän pinta-ala on:" + str(ympyra))
+import math
+r = float(input("Anna ympyrän säde: "))
+
+A = math.pi * r ** 2
+print(f"ympyrän pinta-ala on: {A}") 
