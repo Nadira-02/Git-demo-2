@@ -16,5 +16,8 @@ else:
     # loput yli 200 kWh 6 senttiä
     hinta = 50 * 10 + 150 * 8 + (kulutus - 200) * 6
 
+# alkuperäinen muoto
+print(f"Sähkön hinta: {hinta/100} euroa.")
+
 # Tulostuksen hifistely kotimaiseen muotoon
 print(f"Sähkön hinta: {hinta//100:.0f},{hinta%100:.0f} euroa.")
