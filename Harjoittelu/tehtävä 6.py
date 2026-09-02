@@ -9,13 +9,15 @@ while counter < N:
     x = random.uniform(-1,1)
     y = random.uniform(-1,1)
     print(f"{counter}. arvotun pisteen koordinaatit, x: {x}, y: {y}")
-    if x ** 2 + y ** 2 > 1: 
+    if x ** 2 + y ** 2 <= 1: 
         n = n + 1
         print("Piste on ympyrän sisällä.")
 
-print(f"Pisteitä arvottu yhteensä {N}, joista ympyrän sisälle osui {n} kpl.")
+pii_arvio = 4 * (n / N)
 
-#Todo: laske pii annetulla kaavalla ja tulosta. kokeile myös eri N arvolla.
+print(f"Pisteitä arvottu yhteensä {N}, joista ympyrän sisälle osui {n} kpl.")
+print(f"Arvio piin arvosta: {pii_arvio}")
+
 
 
 
