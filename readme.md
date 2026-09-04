@@ -9,4 +9,4 @@ Tein kaikki tehtävät.
 ## Moduuli 5
 Tein kaikki tehtävät.
 ## Moduuli 6
-Tein tehtävä 2.
+Tein kaikki tehtävät.
