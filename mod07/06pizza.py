@@ -12,7 +12,7 @@ for pizza_number in range(2):
     unit_price = calculate_unit_price(diameter, price)
     unit_prices.append(unit_price)
     print(f"{pizza_number+1}. Pizzan yksikköhinta (eur/m2): {unit_price:0.2f}")
-
+    
 if unit_prices[0] < unit_prices[1]:
     print("Ensimmäinen pizza on halvempi.")
 elif unit_prices[0] > unit_prices[1]:
@@ -20,4 +20,4 @@ elif unit_prices[0] > unit_prices[1]:
 else:
     print("Yhtä halpoja.")
 
-#TODO Extra: mitem kehittää ohjelmaa niin, että se toimii N määrällä pozzoja?
+
