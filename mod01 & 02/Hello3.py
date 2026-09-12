@@ -1,6 +1,6 @@
-print('Hei, Nadira Harakow')
+print('Hei, Mikä sinun nimesi on?')
 
-name = input('Nadira Harakow:') 
+name = input('Anna nimi:') 
 print("Hei", name)
 
 teksti = "tämä on merkkijono"
@@ -9,6 +9,6 @@ luku3 = 18
 
 summa = luku + luku3
 
-print("Lukujen", luku, luku3 = summa)
+print(f"Lukujen summa on: {summa}.")
 
 

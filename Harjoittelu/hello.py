@@ -1,9 +1,21 @@
 käyttäjä = input('Anna nimesi: ')
 print("Hauska tavata, "+ käyttäjä + "!")
 
+print("Hauska tavata, " + käyttäjä + "!")
+
 Väri = "Vihreä"
 
-print("Hauska tavata, " + käyttäjä + "!")
+#####################
+
+teksti = "tämä on merkkijono"
+luku1 = 12
+luku3 = 18
+
+summa = luku1 + luku3
+
+print(f"Lukujen summa on: {summa}.")
+
+#########################
 
 # Perustyypit: merkkijono (string), luku (number), joka voi olla kokonaisluku (int), liukuluku (float) tai kopleksiluku, totuusarvo (boolean, joka voi olla true tai false)
 # Muut pythonin tietorakenteet: lista (list), monikko (tuple) ja sanakirja (dictionary).
