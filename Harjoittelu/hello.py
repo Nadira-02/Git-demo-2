@@ -53,5 +53,5 @@ print(f"{'Pii':12s}:{math.pi:10.5f}")
 print(f"{'Neperin luku':12s}:{math.e:10.5f}")
 
 Pii         :   3.14159
-Neperin luku:   2.71828
+Neperin_luku:   2.71828
 
