@@ -10,3 +10,5 @@ Tein kaikki tehtävät.
 Tein kaikki tehtävät.
 ## Moduuli 6
 Tein kaikki tehtävät.
+## Moduuli 7
+Tein kaikki tehtävät.
