@@ -63,3 +63,65 @@ def tervehdi(nimi):
     print(f"Moi, {nimi}!")
 
 tervehdi("Ville")
+
+###############
+def neliosumma(eka, toka):
+    ns = eka**2 + toka**2
+    return ns
+
+luku1 = float(input("Anna ensimmäinen luku: "))
+luku2 = float(input("Anna toinen luku: "))
+tulos = neliosumma(luku1, luku2)
+print(f"Lukujen {luku1:.3f} ja {luku2:.3f} neliösumma on {tulos:.3f}.")
+
+#################
+
+def laske_keskiarvo(*luvut):
+    s = 0
+    for i in luvut:
+        s += i
+    keskiarvo = s / len(luvut)
+    return keskiarvo
+
+tulos = laske_keskiarvo(2, 4, 6, 8)
+print(f'Lukujen keskiarvo on: {tulos:.2f}')
+
+###############
+numerot = {"Nadira": "054-3672873",
+           "Magi": "926-39839028"}
+print(numerot)
+
+nimi = input("Anna nimi: ")
+if nimi in numerot:
+    print(f'Henkilön {nimi} puhelinnumero on: {numerot[nimi]}.')
+    
+#####################
+
+Pääkaupungit = {}
+
+while True:
+    print("\nValitse toiminto:")
+
+    print("1: Lisää tiedot: ")
+    print("2: Hae tieto: ")
+    print("3: Lopeta: ")
+
+    valinta = input("Valitse toiminnot (1-3): ").strip
+
+    if valinta == "1":
+        valtion_nimi = input("Anna valtion nimi:").strip().title()
+        kaupunki = input("Syötä kaupunki: ").strip().title()
+
+        Pääkaupungit[valtion_nimi] = kaupunki
+    elif valinta == "2":
+        valtio = input("Syötä valtio: ").strip().title()
+        if valtio in Pääkaupungit:
+            print(f"kyseisen valtion pääkaupunki on: {Pääkaupungit[valtio]} ")
+        else: 
+            print("Valtio ei löydy")
+    elif valinta == "3":
+        print("Kiitos ja Näkemiin!!!")
+        break
+    else: 
+        print("Virheellinen syöttö")
+
