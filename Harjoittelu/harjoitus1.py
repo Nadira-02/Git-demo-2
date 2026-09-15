@@ -48,3 +48,18 @@ luku = int(input("Anna luku: "))
 for i in range(1, 11):
     tulos = luku * i
     print(f"{luku} * {i}: {tulos}")
+
+###############
+def tervehdi():
+    print("Moi!")
+
+print("Päivä alkaa tervehdyksellä.")
+tervehdi()
+print("Sitten siirrytään muihin asioihin.")
+
+############
+def tervehdi(nimi):
+
+    print(f"Moi, {nimi}!")
+
+tervehdi("Ville")
