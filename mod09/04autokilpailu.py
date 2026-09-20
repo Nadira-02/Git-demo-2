@@ -33,7 +33,7 @@ while kilpailu_kaynnissa:
         auto.kulje(1)
 
         if auto.kuljettu_matka >= 10000:
-            kilpailu_kaynissa = False
+            kilpailu_kaynnissa = False
             break
 print(f"{'Rekisteritunnus':<20} {'Huippunopeus (km/h)':<20} {'Nopeus (km/h)':<15} {'Kuljettu matka (km)':<20}")
 print("-" * 75)
