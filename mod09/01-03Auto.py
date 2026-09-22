@@ -1,4 +1,3 @@
-import random
 class Auto:
     def __init__(self, rekisteritunnus, huippunopeus):
         self.rekisteritunnus = rekisteritunnus
@@ -18,10 +17,6 @@ class Auto:
         self.kuljettu_matka += self.nopeus * tunnit
 
 
-def moikka():
-    print('Tämäpä on mukavaa')
-
-
 auto = Auto('ABC-123', 142)
 
 print('Auton rekisteritunnus:', auto.rekisteritunnus)
@@ -29,7 +24,7 @@ print('Huippunopeus:', auto.huippunopeus)
 print('Nopeus:', auto.nopeus)
 print('Kuljettu matka:', auto.kuljettu_matka)
 
-moikka()
+
 auto.kiihdytä(30)
 auto.kiihdytä(70)
 auto.kiihdytä(50)
