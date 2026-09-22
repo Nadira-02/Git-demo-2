@@ -12,3 +12,10 @@ Tein kaikki tehtävät.
 Tein kaikki tehtävät.
 ## Moduuli 7
 Tein kaikki tehtävät.
+## Moduuli 8
+Tein kaikki tehtävät.
+## Moduuli 9
+Tein kaikki tehtävät.
+## Moduuli 10
+Tein kaikki tehtävät.
+## Moduuli 11
