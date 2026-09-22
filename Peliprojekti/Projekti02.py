@@ -1,34 +1,27 @@
-import sys
-
-def tulosta_valikko():
-    print("\n--- Valikko ---")
-    print("Komennot: ohje, tila, tervehdi, lopeta")
-
-print("Tervetuloa!")
-
 Ikä = int(input("Anna ikäsi: "))
 
 if Ikä < 12:
     print("Olet alaikäinen. Ohjelma suljetaan.")
-    sys.exit()
 else:
-    print("Tervetuloa peliin!")
+    print("\nTervetuloa peliin!")
 
-while True:
-    tulosta_valikko()
-    komento = input("Syötä komento: ").strip().lower()
+    Pelataan = True
+    while Pelataan:
+        print("\n--- PÄÄVALIKKO ---")
+        print("Komennot: Ohje, Inventaario, Vihje, Lopeta")
+        komento = input("Syötä komento: ").strip().lower()
 
-    if komento == "lopeta":
-        print("Ohjelma sammuu. Heippa!")
-        break
-    elif komento == "ohje":
-         print("Syötä komentoja valinkon mukaan.")
-    elif komento == "tila":
-        print("Kaikki järjestelmät toimivat normaalisti.")
-    elif komento == "tervehdi":
-        print("Heippa hei! Mukava nähdä.")
-    else:
-        print("Virhe. Yritä uudelleen.")
+        if komento == "lopeta":
+            print("Game Over. Kiitos pelaamisesta!")
+            Pelataan = False
+        elif komento == "ohje":
+            print("Etsi aarre vihjeen avulla.")
+        elif komento == "vihje":
+            print("Kolme eri väristä ovea.")
+        elif komento == "inventaario":
+            print("Sinulla on taskulamppu, kompassi, juomapullo ja eväät.")
+        else:
+            print("Virhe. Yritä uudelleen.")
         
 
     
