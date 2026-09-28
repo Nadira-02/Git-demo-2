@@ -9,6 +9,7 @@ def listaa_esine(inventaario_lista):
     if uusi_esine:
         inventaario_lista.append(uusi_esine)
         print(f'Kyllä otan {uusi_esine} mukaan reppuun!')
+        return
 
     else:
         print('En ota mukaan.')
