@@ -1,6 +1,8 @@
 def tulosta_ohje():
     print("\n[OHJE]")
-    print("Tutki Islannin luolia ja etsi vihjeen avulla aarre.")
+    print("Olet Troppisella saarella:")
+    print("Kerää merenvirtauksesta tulleet muovijätteet ja roskat, ennen turistilaivan saavuttua. ")
+    print("Kun turistit saapuvat, johdata turistit ympäri saareen ja selvitä kalkkikiviluolan salaisuus.")
 
 def listaa_esine(inventaario_lista):
     print("\n[LÖYSIT ESINEEN!]")
@@ -24,7 +26,7 @@ def näytä_inventaario(inventaario_lista):
             print(f"- {esine}")
 def katso_vihje():
     print("\n[VIHJE]")
-    print("Vihje on: Kolme eri väristä ovea. (Punainen, Keltainen ja Vihreä).")
+    print("Vihje on kaiverrettu luolan seinään:\nValitse 1-3")
 
 Ikä = int(input("Anna ikäsi: "))
 
