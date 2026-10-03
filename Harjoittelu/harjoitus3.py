@@ -15,6 +15,16 @@ kissa2 = Kissa("Lili", 2023)
 kissa1.mauku(3)
 kissa2.mauku(2)
 
+#################
+def tervehdi(kerrat):
+    for i in range(kerrat):
+        print("Hyvää päivää " + str(i+1) + ". kerran")
+    return
+
+print("Päivä alkaa tervehdyksillä.")
+tervehdi(5)
+print("Tervehditään lisää.")
+tervehdi(2)
 
 
 
