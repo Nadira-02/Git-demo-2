@@ -1,6 +1,6 @@
 def Vesiputous(pelaaja):
     print("\n==========================")
-    print("---KOHDE 1: VESIPUTOUS ---")
+    print("---KOHDE 3: VESIPUTOUS ---")
     print("==========================")
     print("Saavuitte saaren vesiputous kohteeseen.")
     print("Turistit ihailevat saaren luontoa ja vesiputousta.\nTuristit kuvaavat matkamuistoja.")
@@ -21,12 +21,13 @@ def Temppeli(pelaaja):
 
     ostaminen = input("\nHaluatko ostaa matkamuistoja? (kyllä/ei)").strip().lower()
 
-    if ostaminen == "kyllä":
+    if ostaminen == "kylla":
         while True:
             ostos = input("Mitä haluat ostaa?").strip()
             if ostos == "":
                 break
-            pelaaja.inventaario.append(ostos)
+            pelaaja.lisaa_esine(ostos)
+            print(f"Lisäsit esineen '{ostos}' reppuusi!")
     elif ostaminen == "ei":
         print("Päätät olla ostamatta mitään torilta.")
 
@@ -53,18 +54,21 @@ def Kalkkikiviluola(pelaaja):
             print("Oven takana ei ole mitään.")
             print("Game over")
             return "Hävisit"
+        
         elif valinta == "2":
             print("\n[OIKEA OVI]")
             print("Oven takana hehkuu vihreä muinainen kristalli. Onneksi olkoon!\n Löysit harvinainen kristalli.")
+
             ottaminen = input("Otatko mukaan reppuun? (kyllä/ei): ").strip().lower()
             if ottaminen == "kyllä":
-                pelaaja.inventaario.append("Muinainen kristalli")
+                pelaaja.lisaa_esine("Muinainen kristalli")
                 print("Otit kristallin mukaan.")
             elif ottaminen == "ei":
                 print("Päätit jättää muinaisen kristallin.")
 
             print("Voitit pelin ja nyt palaatte takaisin rannikkoon.")
             return "Voitit"
+        
         elif valinta == "3":
             print("[VÄÄRÄ OVI]\nOven takana sihisee karmea ääni....SE ON KÄÄRME!!!\nKaikki juoksee pois luolasta.")
             print("Game over")

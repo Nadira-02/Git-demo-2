@@ -16,10 +16,8 @@ def tallenna_peli(pelaaja: Pelaaja, tiedoston_nimi: str = "tallennus.txt"):
             f.write(f"{pelaaja.nimi}\n")
             f.write(f"{pelaaja.ika}\n")
             f.write(f"{pelaaja.roskien_maara}\n")
-
-            # Tallennetaan inventaariossa olevien esineiden nimet pilkulla eroteltuna
-            esineet = [e.nimi for e in pelaaja.inventaario]
-            f.write(f"{','.join(esineet)}\n")
+                    
+            f.write(f"{','.join(pelaaja.inventaario)}\n")
 
         print(f"\n[Pelitilanne tallennettu tiedostoon {tiedoston_nimi}]")
     except Exception as e:
@@ -44,8 +42,7 @@ def lataa_peli(tiedoston_nimi: str = "tallennus.txt") -> Pelaaja:
 
             # Jos inventaariossa oli esineitä (rivillä 4), lisätään ne takaisin
             if len(rivit) > 3 and rivit[3]:
-                for esineen_nimi in rivit[3].split(","):
-                    pelaaja.lisaa_esine(esineen_nimi)
+                pelaaja.inventaario = rivit[3].split(",")
 
             print(f"\n[Ladattiin tallennettu peli: Pelaaja {pelaaja.nimi}]")
             return pelaaja

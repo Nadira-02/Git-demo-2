@@ -1,8 +1,19 @@
 import os
 from Peli.pelaaja01 import Pelaaja
 from Peli.kohteet02 import Vesiputous, Temppeli, Kalkkikiviluola
+from Peli.tallennus03 import lue_tiedosto, tallenna_peli, lataa_peli
 
 def aloitus():
+    print(lue_tiedosto("intro.txt"))
+    print(lue_tiedosto("ohjeet.txt"))
+
+    if os.path.exists("tallennus.txt"):
+        valinta = input("\nLöytyi tallennettu peli. Haluatko jatkaa sitä (kyllä/ei)? ").strip().lower()
+        if valinta == "kyllä":
+            pelaaja = lataa_peli("tallennus.txt")
+            if pelaaja:
+                return pelaaja
+
     print("------ TERVETULOA TROOPPISEN SAAREN SEIKKAILUPELIIN ------")
     nimi = input("Anna nimi: ").strip()
 
@@ -17,14 +28,14 @@ def aloitus():
         print("Olet alaikäinen. Ohjelma suljetaan.")
         return None
     else:
-        print(f"\nTervetuloa peliin, {pelaaja.nimi}!")
+        print(f"\nTervetuloa peliin, {nimi}!")
         return Pelaaja(nimi, ika)
 
 def siivous(pelaaja):
-    print("\n==========================")
+    print("\n=================================")
     print("---ALKUPISTE: SAAREN RANNIKKO ---")
-    print("==========================")
-    print("Olet rannikolla. Rannalla on muovijätettä ja roskia.")
+    print("=================================")
+    print("Olet rannikolla. Rannalla on muovijätteitä ja roskia.")
 
     while True:
         try:
@@ -35,8 +46,9 @@ def siivous(pelaaja):
             print("Virhe: Syötä numero.")
 
     pelaaja.keraa(maara)
-    print(f"\nHyvä! Keräsit kaikki {pelaaja.roskia_maara} roskaa rannalta.")
+    print(f"\nHyvä! Keräsit kaikki {pelaaja.roskien_maara} roskaa rannalta.")
     print(f"Turistilaiva saapuu satamaan!")
+    tallenna_peli(pelaaja)
 
 def valitse_reitti(pelaaja):
     print("[MATKA ALKAA!]")
@@ -44,23 +56,27 @@ def valitse_reitti(pelaaja):
     print("2: Keski suunta (Temppeli)")
     print("3: Oikea suunta (Vesiputous)")
 
-    valinta = input("Valitse suunta (1, 2 tai 3): ").strip()
+    while True:
 
-    if valinta == "1":
-        return Kalkkikiviluola(pelaaja)
-    elif valinta == "2":
-        return Temppeli(pelaaja)
-    elif valinta == "3":
-        return Vesiputous(pelaaja)
-    else:
-        print("Virheellinen valinta! Syötä numero 1, 2 tai 3.")
+        valinta = input("Valitse suunta (1, 2 tai 3): ").strip()
+
+        if valinta == "1":
+            return Kalkkikiviluola(pelaaja)
+        elif valinta == "2":
+            return Temppeli(pelaaja)
+        elif valinta == "3":
+            return Vesiputous(pelaaja)
+        else:
+            print("Virheellinen valinta! Syötä numero 1, 2 tai 3.")
 
 def main():
     pelaaja = aloitus()
     if pelaaja is None:
         return
 
-    siivous(pelaaja)
+    if pelaaja.roskien_maara == 0:
+        siivous(pelaaja)
+    
     tulos = valitse_reitti(pelaaja)
 
     print("\n==========================")
@@ -70,6 +86,8 @@ def main():
     print(f"Kerätyt roskat: {pelaaja.roskien_maara}")
     print(f"Inventaario: {pelaaja.inventaario}")
     print(f"Pelin tulos: {tulos}")
+
+    tallenna_peli(pelaaja)
 
 if __name__ == "__main__":
     main()
