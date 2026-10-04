@@ -16,14 +16,14 @@ def Temppeli(pelaaja: Pelaaja):
     print("---KOHDE 2: TEMPPELI ---")
     print("==========================")
     print("Saavuitte saaren muinaiseen temppeliin.")
-    print("Turistit tutustuvat saaren muinaiseen historiaan.")
+    print("Turistit tutustuvat saaren historiaan.")
     print("Torilta saa ostaa matkamuistoja.")
 
     ostaminen = input("\nHaluatko ostaa matkamuistoja? (kyllä/ei): ").strip().lower()
 
     if ostaminen == "kyllä":
         while True:
-            ostos = input("Mitä haluat ostaa? ").strip()
+            ostos = input("\nMitä haluat ostaa? ").strip()
             if ostos == "":
                 break
             pelaaja.lisaa_esine(ostos)

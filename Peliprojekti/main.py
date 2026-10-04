@@ -35,7 +35,7 @@ def siivous(pelaaja: Pelaaja):
     print("\n=================================")
     print("---ALKUPISTE: SAAREN RANNIKKO ---")
     print("=================================")
-    print("\nOlet rannikolla. Rannalla on muovijätteitä ja roskia.")
+    print("Olet rannikolla. Rannalla on muovijätteitä ja roskia.")
 
     while True:
         try:
@@ -52,7 +52,7 @@ def siivous(pelaaja: Pelaaja):
 
 def valitse_reitti(pelaaja: Pelaaja):
 
-    print("[MATKA ALKAA!]")
+    print("\n[MATKA ALKAA!]")
     print("1: Vasen suunta (Kalkkikiviluola)")
     print("2: Keski suunta (Temppeli)")
     print("3: Oikea suunta (Vesiputous)")
