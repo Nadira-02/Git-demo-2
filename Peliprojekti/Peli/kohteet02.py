@@ -1,4 +1,5 @@
-def Vesiputous(pelaaja):
+from Peli.pelaaja01 import Pelaaja
+def Vesiputous(pelaaja: Pelaaja):
     print("\n==========================")
     print("---KOHDE 3: VESIPUTOUS ---")
     print("==========================")
@@ -8,10 +9,9 @@ def Vesiputous(pelaaja):
     input("\nJatka matkaa painamalla'ENTER': ")
     print("Jatketaan matkaa seuraavaan kohteeseen.")
 
-
     return Temppeli(pelaaja)
     
-def Temppeli(pelaaja):
+def Temppeli(pelaaja: Pelaaja):
     print("\n==========================")
     print("---KOHDE 2: TEMPPELI ---")
     print("==========================")
@@ -21,13 +21,14 @@ def Temppeli(pelaaja):
 
     ostaminen = input("\nHaluatko ostaa matkamuistoja? (kyllä/ei)").strip().lower()
 
-    if ostaminen == "kylla":
+    if ostaminen == "kyllä":
         while True:
             ostos = input("Mitä haluat ostaa?").strip()
             if ostos == "":
                 break
             pelaaja.lisaa_esine(ostos)
             print(f"Lisäsit esineen '{ostos}' reppuusi!")
+
     elif ostaminen == "ei":
         print("Päätät olla ostamatta mitään torilta.")
 
@@ -36,7 +37,7 @@ def Temppeli(pelaaja):
     return Kalkkikiviluola(pelaaja)
     
 
-def Kalkkikiviluola(pelaaja):
+def Kalkkikiviluola(pelaaja: Pelaaja):
     print("\n==========================")
     print("---KOHDE 1: KALKKIKIVILUOLA ---")
     print("==========================")

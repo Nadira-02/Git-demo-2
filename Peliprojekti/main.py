@@ -50,7 +50,7 @@ def siivous(pelaaja: Pelaaja):
     print(f"Turistilaiva saapuu satamaan!")
     tallenna_peli(pelaaja)
 
-def valitse_reitti(pelaaja):
+def valitse_reitti(pelaaja: Pelaaja):
     print("[MATKA ALKAA!]")
     print("1: Vasen suunta (Kalkkikiviluola)")
     print("2: Keski suunta (Temppeli)")
