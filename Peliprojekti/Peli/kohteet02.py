@@ -19,11 +19,11 @@ def Temppeli(pelaaja: Pelaaja):
     print("Turistit tutustuvat saaren muinaiseen historiaan.")
     print("Torilta saa ostaa matkamuistoja.")
 
-    ostaminen = input("\nHaluatko ostaa matkamuistoja? (kyllä/ei)").strip().lower()
+    ostaminen = input("\nHaluatko ostaa matkamuistoja? (kyllä/ei): ").strip().lower()
 
     if ostaminen == "kyllä":
         while True:
-            ostos = input("Mitä haluat ostaa?").strip()
+            ostos = input("Mitä haluat ostaa? ").strip()
             if ostos == "":
                 break
             pelaaja.lisaa_esine(ostos)
@@ -38,9 +38,9 @@ def Temppeli(pelaaja: Pelaaja):
     
 
 def Kalkkikiviluola(pelaaja: Pelaaja):
-    print("\n==========================")
+    print("\n===============================")
     print("---KOHDE 1: KALKKIKIVILUOLA ---")
-    print("==========================")
+    print("===============================")
     print("Saavuitte saaren kalkkikiviluolaan.")
     print("Turistit ihailevat tippukiviä ja erikoisia kivilajeja.")
     print("Matkan varrella kohtaatte kolmeen värilliseen oveen.\nLuolan seinään on kaiverrettu vanha matemaattinen vihje.")
@@ -58,7 +58,7 @@ def Kalkkikiviluola(pelaaja: Pelaaja):
         
         elif valinta == "2":
             print("\n[OIKEA OVI]")
-            print("Oven takana hehkuu vihreä muinainen kristalli. Onneksi olkoon!\n Löysit harvinainen kristalli.")
+            print("Oven takana hehkuu vihreä muinainen kristalli. Onneksi olkoon!\nLöysit harvinaisen kristalli.")
 
             ottaminen = input("Otatko mukaan reppuun? (kyllä/ei): ").strip().lower()
             if ottaminen == "kyllä":

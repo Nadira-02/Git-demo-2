@@ -14,8 +14,8 @@ def aloitus():
             if pelaaja:
                 return pelaaja
 
-    print("------ TERVETULOA TROOPPISEN SAAREN SEIKKAILUPELIIN ------")
-    nimi = input("Anna nimi: ").strip()
+    print("\n------ TERVETULOA TROOPPISEN SAAREN SEIKKAILUPELIIN ------")
+    nimi = input("\nAnna nimi: ").strip()
 
     while True: 
         try: 
@@ -35,7 +35,7 @@ def siivous(pelaaja: Pelaaja):
     print("\n=================================")
     print("---ALKUPISTE: SAAREN RANNIKKO ---")
     print("=================================")
-    print("Olet rannikolla. Rannalla on muovijätteitä ja roskia.")
+    print("\nOlet rannikolla. Rannalla on muovijätteitä ja roskia.")
 
     while True:
         try:
@@ -46,11 +46,12 @@ def siivous(pelaaja: Pelaaja):
             print("Virhe: Syötä numero.")
 
     pelaaja.keraa(maara)
-    print(f"\nHyvä! Keräsit kaikki {pelaaja.roskien_maara} roskaa rannalta.")
+    print(f"\nErinomaista! Keräsit kaikki {pelaaja.roskien_maara} roskaa rannalta. Nyt ranta on siisti.")
     print(f"Turistilaiva saapuu satamaan!")
     tallenna_peli(pelaaja)
 
 def valitse_reitti(pelaaja: Pelaaja):
+
     print("[MATKA ALKAA!]")
     print("1: Vasen suunta (Kalkkikiviluola)")
     print("2: Keski suunta (Temppeli)")
