@@ -31,7 +31,7 @@ def aloitus():
         print(f"\nTervetuloa peliin, {nimi}!")
         return Pelaaja(nimi, ika)
 
-def siivous(pelaaja):
+def siivous(pelaaja: Pelaaja):
     print("\n=================================")
     print("---ALKUPISTE: SAAREN RANNIKKO ---")
     print("=================================")
@@ -79,9 +79,9 @@ def main():
     
     tulos = valitse_reitti(pelaaja)
 
-    print("\n==========================")
+    print("\n=================================")
     print("---ALKUPISTE: SAAREN RANNIKKO ---")
-    print("==========================")
+    print("=================================")
     print(f"Pelaaja: {pelaaja.nimi}")
     print(f"Kerätyt roskat: {pelaaja.roskien_maara}")
     print(f"Inventaario: {pelaaja.inventaario}")
