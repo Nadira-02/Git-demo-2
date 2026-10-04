@@ -1,5 +1,6 @@
-from Peli import Pelaaja
-from Peli import Vesiputous, Temppeli, Kalkkikiviluola
+import os
+from Peli.pelaaja01 import Pelaaja
+from Peli.kohteet02 import Vesiputous, Temppeli, Kalkkikiviluola
 
 def aloitus():
     print("------ TERVETULOA TROOPPISEN SAAREN SEIKKAILUPELIIN ------")
@@ -54,8 +55,22 @@ def valitse_reitti(pelaaja):
     else:
         print("Virheellinen valinta! Syötä numero 1, 2 tai 3.")
 
+def main():
+    pelaaja = aloitus()
+    if pelaaja is None:
+        return
 
+    siivous(pelaaja)
+    tulos = valitse_reitti(pelaaja)
 
-## ---PÄÄOHJELMA--- ##
-pelaaja = aloitus() 
+    print("\n==========================")
+    print("---ALKUPISTE: SAAREN RANNIKKO ---")
+    print("==========================")
+    print(f"Pelaaja: {pelaaja.nimi}")
+    print(f"Kerätyt roskat: {pelaaja.roskien_maara}")
+    print(f"Inventaario: {pelaaja.inventaario}")
+    print(f"Pelin tulos: {tulos}")
+
+if __name__ == "__main__":
+    main()
 
