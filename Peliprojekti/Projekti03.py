@@ -26,6 +26,7 @@ def näytä_inventaario(inventaario_lista):
             print(f"- {esine}")
 def katso_vihje():
     print("\n[VIHJE]")
+    print("")
     print("Vihje on kaiverrettu luolan seinään:\nValitse 1-3")
 
 Ikä = int(input("Anna ikäsi: "))
