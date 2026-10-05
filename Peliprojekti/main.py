@@ -81,8 +81,11 @@ def main():
     tulos = valitse_reitti(pelaaja)
 
     print("\n=================================")
-    print("---ALKUPISTE: SAAREN RANNIKKO ---")
+    print("---LOPPUPISTE: SAAREN RANNIKKO ---")
     print("=================================")
+
+    print("--------- KIITOS KUN PELASIT! ----------")
+
     print(f"Pelaaja: {pelaaja.nimi}")
     print(f"Kerätyt roskat: {pelaaja.roskien_maara}")
     print(f"Inventaario: {pelaaja.inventaario}")

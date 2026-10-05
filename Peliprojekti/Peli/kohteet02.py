@@ -44,7 +44,7 @@ def Kalkkikiviluola(pelaaja: Pelaaja):
     print("Saavuitte saaren kalkkikiviluolaan.")
     print("Turistit ihailevat tippukiviä ja erikoisia kivilajeja.")
     print("Matkan varrella kohtaatte kolmeen värilliseen oveen.\nLuolan seinään on kaiverrettu vanha matemaattinen vihje.")
-    print("Oikea ovi numero selviää ratkaisemalla yhtälön: ")
+    print("Oikean oven numero selviää ratkaisemalla yhtälön: ")
     print("\n[6x + 4 = 20 - 2x]")
     print("Mikä on oikea vastaus:\nOvi 1: sininen\nOvi 2: vihreä\nOvi 3: punainen") 
 
