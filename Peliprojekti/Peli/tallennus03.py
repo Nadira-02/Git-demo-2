@@ -1,17 +1,21 @@
 import os
 from Peli.pelaaja01 import Pelaaja
 
+TÄMÄ_KANSIO = os.path.dirname(os.path.abspath(__file__))  # Peli-kansio
+JUURI_KANSIO = os.path.dirname(TÄMÄ_KANSIO)
 
 def lue_tiedosto(tiedoston_nimi: str) -> str:
-    if os.path.exists(tiedoston_nimi):
-        with open(tiedoston_nimi, "r", encoding="utf-8") as f:
+    polku = os.path.join(JUURI_KANSIO, tiedoston_nimi)
+    if os.path.exists(polku):
+        with open(polku, "r", encoding="utf-8") as f:
             return f.read()
     return f"Tiedostoa {tiedoston_nimi} ei löytynyt."
 
 
 def tallenna_peli(pelaaja: Pelaaja, tiedoston_nimi: str = "tallennus.txt"):
+    polku = os.path.join(JUURI_KANSIO, tiedoston_nimi)
     try:
-        with open(tiedoston_nimi, "w", encoding="utf-8") as f:
+        with open(polku, "w", encoding="utf-8") as f:
             f.write(f"{pelaaja.nimi}\n")
             f.write(f"{pelaaja.ika}\n")
             f.write(f"{pelaaja.roskien_maara}\n")
@@ -24,12 +28,13 @@ def tallenna_peli(pelaaja: Pelaaja, tiedoston_nimi: str = "tallennus.txt"):
 
 
 def lataa_peli(tiedoston_nimi: str = "tallennus.txt") -> Pelaaja:
-    if not os.path.exists(tiedoston_nimi):
+    polku = os.path.join(JUURI_KANSIO, tiedoston_nimi)
+    if not os.path.exists(polku):
         print("Tallennettua peliä ei löytynyt.")
         return None
 
     try:
-        with open(tiedoston_nimi, "r", encoding="utf-8") as f:
+        with open(polku, "r", encoding="utf-8") as f:
             rivit = [rivi.strip() for rivi in f.readlines()]
             nimi = rivit[0]
             ika = int(rivit[1])
