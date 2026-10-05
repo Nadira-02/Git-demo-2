@@ -1,4 +1,3 @@
-# Peli/tallennus03.py
 import os
 from Peli.pelaaja01 import Pelaaja
 
@@ -36,11 +35,9 @@ def lataa_peli(tiedoston_nimi: str = "tallennus.txt") -> Pelaaja:
             ika = int(rivit[1])
             roskat = int(rivit[2])
 
-            # Luodaan uusi Pelaaja-olio
             pelaaja = Pelaaja(nimi, ika)
             pelaaja.roskat_keratty = roskat
 
-            # Jos inventaariossa oli esineitä (rivillä 4), lisätään ne takaisin
             if len(rivit) > 3 and rivit[3]:
                 pelaaja.inventaario = rivit[3].split(",")
 

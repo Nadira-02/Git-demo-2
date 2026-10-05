@@ -14,7 +14,7 @@ def aloitus():
             if pelaaja:
                 return pelaaja
 
-    print("\n------ TERVETULOA TROOPPISEN SAAREN SEIKKAILUPELIIN ------")
+    print("\n------ TERVETULOA TROOPPISEN SAAREN AARRE JAHTI PELIIN ------")
     nimi = input("\nAnna nimi: ").strip()
 
     while True: 
