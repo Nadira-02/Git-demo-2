@@ -80,9 +80,9 @@ def main():
     
     tulos = valitse_reitti(pelaaja)
 
-    print("\n=================================")
-    print("---LOPPUPISTE: SAAREN RANNIKKO ---")
-    print("=================================")
+    print("\n===================================")
+    print("--- LOPPUPISTE: SAAREN RANNIKKO ---")
+    print("===================================")
 
     print("--------- KIITOS KUN PELASIT! ----------")
 

@@ -1,4 +1,12 @@
-=========================================
--------------- PELIOHJE ----------------
-=========================================
-1. 
+=======================================================
+---------------------- PELIOHJE -----------------------
+=======================================================
+1. Syötä valinnat kirjoittamalla pyydetty
+   numero tai sana.
+2. Vastaa kysymyksiin selkeästi (esim. kyllä/ei tai 1, 2, 3).
+3. Voit kerätä tavaroita reppuusi seikkailun aikana.
+4. Ratkaise yhtälö, jotta saat selville oikean oven 
+   numero.
+5. Pelitilanne tallentuu auttomaattisesti.
+
+=======================================================

@@ -1,4 +1,4 @@
-miia
-21
-25
-Taskulamppu,Kompassi,Juomapullo,Eväät
+24
+23
+20
+Taskulamppu,Kompassi,Juomapullo,Eväät,avaimenperä,huulirasvaa,naposteltavaa,Muinainen kristalli
