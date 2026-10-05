@@ -41,7 +41,7 @@ def lataa_peli(tiedoston_nimi: str = "tallennus.txt") -> Pelaaja:
             roskat = int(rivit[2])
 
             pelaaja = Pelaaja(nimi, ika)
-            pelaaja.roskat_keratty = roskat
+            pelaaja.roskien_maara = roskat
 
             if len(rivit) > 3 and rivit[3]:
                 pelaaja.inventaario = rivit[3].split(",")

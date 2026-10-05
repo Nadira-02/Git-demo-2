@@ -7,7 +7,7 @@ def aloitus():
     print(lue_tiedosto("intro.txt"))
     print(lue_tiedosto("ohjeet.txt"))
 
-    if os.path.exists("tallennus.txt"):
+    if os.path.exists("tallennus.txt"): # Tallennuksen jatkaminen vai uusi peli
         valinta = input("\nLöytyi tallennettu peli. Haluatko jatkaa sitä (kyllä/ei)? ").strip().lower()
         if valinta == "kyllä":
             pelaaja = lataa_peli("tallennus.txt")
@@ -17,6 +17,7 @@ def aloitus():
     print("\n------ TERVETULOA TROOPPISEN SAAREN AARRE JAHTI PELIIN ------")
     nimi = input("\nAnna nimi: ").strip()
 
+    # Syötesilmukka (Virheentarkastus iälle)
     while True: 
         try: 
             ika = int(input("Anna ikä: "))
@@ -57,6 +58,7 @@ def valitse_reitti(pelaaja: Pelaaja):
     print("2: Keski suunta (Temppeli)")
     print("3: Oikea suunta (Vesiputous)")
 
+    # Valikkosilmukka
     while True:
 
         valinta = input("Valitse suunta (1, 2 tai 3): ").strip()
@@ -70,7 +72,7 @@ def valitse_reitti(pelaaja: Pelaaja):
         else:
             print("Virheellinen valinta! Syötä numero 1, 2 tai 3.")
 
-def main():
+def main(): # Komentorivikäyttöliittymä, Pelin pääsilmukka/pääohjain ja reittivalikot.
     pelaaja = aloitus()
     if pelaaja is None:
         return

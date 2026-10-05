@@ -9,7 +9,7 @@ def Vesiputous(pelaaja: Pelaaja):
     input("\nJatka matkaa painamalla'ENTER': ")
     print("Jatketaan matkaa seuraavaan kohteeseen.")
 
-    return Temppeli(pelaaja)
+    return Temppeli(pelaaja) 
     
 def Temppeli(pelaaja: Pelaaja):
     print("\n==========================")
@@ -24,7 +24,7 @@ def Temppeli(pelaaja: Pelaaja):
     if ostaminen == "kyllä":
         while True:
             ostos = input("\nMitä haluat ostaa? ").strip()
-            if ostos == "":
+            if ostos == "": # Peli jatkuu seuraavaan vaiheeseen painamalla ENTER.
                 break
             pelaaja.lisaa_esine(ostos)
             print(f"Lisäsit esineen '{ostos}' reppuusi!")
@@ -63,11 +63,11 @@ def Kalkkikiviluola(pelaaja: Pelaaja):
             ottaminen = input("Otatko mukaan reppuun? (kyllä/ei): ").strip().lower()
             if ottaminen == "kyllä":
                 pelaaja.lisaa_esine("Muinainen kristalli")
-                print("Otit kristallin mukaan.")
+                print("\nOtit kristallin mukaan.")
             elif ottaminen == "ei":
                 print("Päätit jättää muinaisen kristallin.")
 
-            print("Voitit pelin ja nyt palaatte takaisin rannikkoon.")
+            print("\nVoitit pelin ja nyt palaatte takaisin rannikkoon.")
             return "Voitit"
         
         elif valinta == "3":

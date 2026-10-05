@@ -1,4 +1,4 @@
-Nadi
-24
-2
-Taskulamppu,Kompassi,Juomapullo,Eväät
+sharmake
+28
+4
+Taskulamppu,Kompassi,Juomapullo,Eväät,banaani,omena,mehu,Muinainen kristalli
