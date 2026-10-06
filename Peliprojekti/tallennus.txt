@@ -1,4 +1,4 @@
 Nadira
 24
 20
-Taskulamppu,Kompassi,Juomapullo,Eväät,1,2,3,Muinainen kristalli
+Taskulamppu,Kompassi,Juomapullo,Eväät,omena,Muinainen kristalli
